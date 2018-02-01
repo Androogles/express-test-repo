@@ -3,42 +3,73 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Server</title>
 </head>
 
 <body>
+    <a href="opgave2.html" class="sidelink">Gå til Opgave 2</a>
     <div id="content">
 
     </div>
 
     <script>
+        // Test udskrift, og Opgave udsfrift.
+        // Test
+        fetch('http://localhost:3000/api/test')
+            .then(response => {
+                console.log(response);
+                return response.json();
+            }).then(json => {
+                let overskrift = document.createElement('h1');
+                overskrift.textContent = "Test";
+                overskrift.setAttribute('class', 'overskrift');
+                content.appendChild(overskrift);
+
+                let text = document.createElement('h2');
+                text.textContent = json.text;
+                text.setAttribute('class', 'testopg');
+                content.appendChild(text);
+            })
+
+
+        // Opgave 1
         fetch('http://localhost:3000/api/opgave')
             .then(response => {
                 console.log(response);
                 return response.json();
             }).then(json => {
+                let overskrift2 = document.createElement('h1');
+                overskrift2.textContent = "Opgave 1";
+                overskrift2.setAttribute('class', 'overskrift');
+                content.appendChild(overskrift2);
+
                 // Fornavn
                 let fornavn = document.createElement('h2');
                 fornavn.textContent = json.Navn;
+                fornavn.setAttribute('class', 'color');
                 content.appendChild(fornavn);
 
                 // Efternavn
                 let efternavn = document.createElement('h2');
                 efternavn.textContent = json.Efternavn;
+                efternavn.setAttribute('class', 'color');
                 content.appendChild(efternavn);
 
                 // Alder
                 let alder = document.createElement('h2');
                 alder.textContent = json.Alder;
+                alder.setAttribute('class', 'color');
                 content.appendChild(alder);
 
                 // By
                 let by = document.createElement('h2');
                 by.textContent = json.By;
+                by.setAttribute('class', 'color');
                 content.appendChild(by);
-            })
+            })          
     </script>
 </body>
 

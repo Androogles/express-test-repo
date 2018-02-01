@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="index.html" class="sidelink">Tilbage til Opgave1</a>
+    <div id="content">
+
+    </div>
+
+    <script>
+        fetch('http://localhost:3000/api/route1')
+            .then(response => {
+                console.log(response);
+                return response.json();
+            }).then(json => {
+                let overskrift3 = document.createElement('h1');
+                overskrift3.textContent = "Opgave 2,1";
+                overskrift3.setAttribute('class', 'overskrift');
+                content.appendChild(overskrift3);
+
+                // Farve1
+                let farve1 = document.createElement('h1');
+                farve1.textContent = json.Farve1;
+                farve1.setAttribute('class', 'farve1');
+                content.appendChild(farve1);
+
+                // Farve2
+                let farve2 = document.createElement('h1');
+                farve2.textContent = json.Farve2;
+                farve2.setAttribute('class', 'farve2');
+                content.appendChild(farve2);
+
+                // Farve3
+                let farve3 = document.createElement('h1');
+                farve3.textContent = json.Farve3;
+                farve3.setAttribute('class', 'farve3');
+                content.appendChild(farve3);
+            })
+
+
+
+        fetch('http://localhost:3000/api/route2')
+            .then(response => {
+                console.log(response);
+                return response.json();
+            }).then(json => {
+                let overskrift4 = document.createElement('h1');
+                overskrift4.textContent = "Opgave 2,2";
+                overskrift4.setAttribute('class', 'overskrift');
+                content.appendChild(overskrift4);
+
+                // Tal1
+                let tal1 = document.createElement('h2');
+                tal1.textContent = json.Tal1;
+                tal1.setAttribute('class', 'tal');
+                content.appendChild(tal1);
+
+                // Tal2
+                let tal2 = document.createElement('h2');
+                tal2.textContent = json.Tal2;
+                tal2.setAttribute('class', 'tal');
+                content.appendChild(tal2);
+
+                // Tal3
+                let tal3 = document.createElement('h2');
+                tal3.textContent = json.Tal3;
+                tal3.setAttribute('class', 'tal');
+                content.appendChild(tal3);
+
+                // Tal4
+                let tal4 = document.createElement('h2');
+                tal4.textContent = json.Tal4;
+                tal4.setAttribute('class', 'tal');
+                content.appendChild(tal4);
+            })
+
+    </script>
+</body>
+
+</html>

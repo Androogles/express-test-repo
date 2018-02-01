@@ -1,0 +1,47 @@
+body {
+    text-align: center;
+    background-color: black;
+}
+
+.overskrift {
+    color: white;
+}
+
+.color {
+    color: yellow;
+}
+
+.testopg {
+    color: green;
+}
+
+.farve1 {
+    color: red;
+}
+
+.farve2 {
+    color: green;
+}
+
+.farve3 {
+    color: blue;
+}
+
+.tal {
+    color: orange;
+}
+
+.sidelink {
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    font-size: 22px;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 4px;
+}
+
+.sidelink:hover {
+    background-color: white;
+    color: black;
+}
