@@ -32,10 +32,10 @@ app.get('/api/route1', (req, res) => {
 
 app.get('/api/route2', (req, res) => {
     res.json({
-        Tal1: "5",
-        Tal2: "10",
-        Tal3: "15",
-        Tal4: "20"
+        Tal1: 5,
+        Tal2: 10,
+        Tal3: 15,
+        Tal4: 20
     });
 });
 

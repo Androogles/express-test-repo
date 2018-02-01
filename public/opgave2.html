@@ -21,6 +21,7 @@
                 console.log(response);
                 return response.json();
             }).then(json => {
+                // Overskrift 3
                 let overskrift3 = document.createElement('h1');
                 overskrift3.textContent = "Opgave 2,1";
                 overskrift3.setAttribute('class', 'overskrift');
@@ -52,6 +53,7 @@
                 console.log(response);
                 return response.json();
             }).then(json => {
+                // Overskrift 4
                 let overskrift4 = document.createElement('h1');
                 overskrift4.textContent = "Opgave 2,2";
                 overskrift4.setAttribute('class', 'overskrift');
@@ -80,6 +82,18 @@
                 tal4.textContent = json.Tal4;
                 tal4.setAttribute('class', 'tal');
                 content.appendChild(tal4);
+
+                // Overskrift 5
+                let overskrift5 = document.createElement('h1');
+                overskrift5.textContent = "Resultat";
+                overskrift5.setAttribute('class', 'overskrift');
+                content.appendChild(overskrift5);
+
+                // Resultat
+                let resultat = document.createElement('h2');
+                resultat.textContent = json.Tal1 + json.Tal2 + json.Tal3 + json.Tal4;
+                resultat.setAttribute('class', 'tal');
+                content.appendChild(resultat);
             })
 
     </script>

@@ -23,11 +23,13 @@
                 console.log(response);
                 return response.json();
             }).then(json => {
+                // Overskrift 
                 let overskrift = document.createElement('h1');
                 overskrift.textContent = "Test";
                 overskrift.setAttribute('class', 'overskrift');
                 content.appendChild(overskrift);
 
+                // Text
                 let text = document.createElement('h2');
                 text.textContent = json.text;
                 text.setAttribute('class', 'testopg');
@@ -41,6 +43,7 @@
                 console.log(response);
                 return response.json();
             }).then(json => {
+                // Overskrift 2
                 let overskrift2 = document.createElement('h1');
                 overskrift2.textContent = "Opgave 1";
                 overskrift2.setAttribute('class', 'overskrift');
